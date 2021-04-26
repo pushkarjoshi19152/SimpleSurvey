@@ -118,7 +118,7 @@ namespace SimpleSurvey
                     foreach (TableRow tr in tbl.Rows)
                     {
                         Survey_Response sres = new Survey_Response();
-                        sres.FilledBy = 2;
+                        sres.FilledBy = 1;
                         sres.SurveyID = surveyid;
                         sres.QuestionID = Convert.ToInt32(tr.Cells[0].Attributes["ID"]);
                         TableCell tc = tr.Cells[1];

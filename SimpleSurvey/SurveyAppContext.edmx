@@ -533,7 +533,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="SurveyAppContext" ZoomLevel="64">
+      <Diagram Name="SurveyAppContext" ZoomLevel="81">
         <EntityTypeShape EntityType="SurveyAppModel.Question" Width="1.5" PointX="5.25" PointY="2.875" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="SurveyAppModel.Role" Width="1.5" PointX="0.75" PointY="3.5" Height="1.5956835937499996" IsExpanded="true" />
         <EntityTypeShape EntityType="SurveyAppModel.Survey" Width="1.5" PointX="5.25" PointY="6.125" Height="2.9417936197916656" IsExpanded="true" />

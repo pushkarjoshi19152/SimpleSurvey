@@ -32,20 +32,20 @@ namespace SimpleSurvey
                 Survey survey = new Survey();
                 survey.Title = txtTitle.Text;
                 survey.Description = txtDesc.Text;
-                survey.ExpiresOn = Convert.ToDateTime(txtDate.Text.Trim());
+                survey.ExpiresOn = Convert.ToDateTime(DateTime.Now);
                 survey.CreatedOn = Convert.ToDateTime(DateTime.Now);
-                survey.CreatedBy = 2;
+                survey.CreatedBy = 1;
                 List<SurveyQuestion> questions = new List<SurveyQuestion>();
                 foreach (ListItem li in lbTarget.Items)
                 {
                     SurveyQuestion quest = new SurveyQuestion();
-                    quest.QuestionID = int.Parse(li.Value);
+                    quest.QuestionID = 1;
                     survey.SurveyQuestions.Add(quest);
                     questions.Add(quest);
                 }
                 context.AddToSurveys(survey);
                 context.SaveChanges();
-
+              
             }
         }
 

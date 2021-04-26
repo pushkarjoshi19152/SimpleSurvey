@@ -74,13 +74,13 @@
                                 onclick="btnAddAll_Click" Text="&gt;&gt;" />
                             <br />
                             <asp:Button ID="btnAddOne" runat="server" CausesValidation="False" 
-                                onclick="btnAddOne_Click" Text=" &gt; " />
+                                onclick="btnAddOne_Click" Text=" &gt; " style="height: 29px" />
                             <br />
                             <asp:Button ID="btnRemoveOne" runat="server" CausesValidation="False" 
                                 onclick="btnRemoveOne_Click" Text=" &lt; " />
                             <br />
                             <asp:Button ID="btnRemoveAll" runat="server" CausesValidation="False" 
-                                onclick="btnRemoveAll_Click" Text="&lt;&lt;" />
+                                onclick="btnRemoveAll_Click" Text="&lt;&lt;" style="height: 29px" />
                         </td>
                         <td class="style2">
                             <asp:ListBox ID="lbTarget" runat="server" Rows="6" Width="100%"></asp:ListBox>
