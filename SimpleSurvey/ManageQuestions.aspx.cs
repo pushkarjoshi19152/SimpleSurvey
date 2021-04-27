@@ -32,7 +32,7 @@ namespace SimpleSurvey
                 quest.Options = txtValues.Text.Trim();
                 context.AddToQuestions(quest);
                 context.SaveChanges();
-              //  Response.Redirect("SurveyForm.aspx");
+              Response.Redirect("ManageSurveys.aspx");
             }
         }
     }
