@@ -27,6 +27,8 @@ namespace SimpleSurvey
         }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+           
+
             if (Page.IsValid)
             {
                 Survey survey = new Survey();
@@ -36,12 +38,16 @@ namespace SimpleSurvey
                 survey.CreatedOn = Convert.ToDateTime(DateTime.Now);
                 survey.CreatedBy = 1;
                 List<SurveyQuestion> questions = new List<SurveyQuestion>();
+                List<Question> questions1 = context.Questions.ToList();
+               
                 foreach (ListItem li in lbTarget.Items)
                 {
                     SurveyQuestion quest = new SurveyQuestion();
                     quest.QuestionID = 1;
                     survey.SurveyQuestions.Add(quest);
                     questions.Add(quest);
+                    
+                    
                 }
                 context.AddToSurveys(survey);
                 context.SaveChanges();

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SimpleSurvey {
-    
-    
-    public partial class ManageQuestions {
-        
+namespace SimpleSurvey
+{
+
+
+    public partial class ManageQuestions
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace SimpleSurvey {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// ddlTypes control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace SimpleSurvey {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlTypes;
-        
+
         /// <summary>
         /// txtTitle control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace SimpleSurvey {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTitle;
-        
+
         /// <summary>
         /// txtDesc control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace SimpleSurvey {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDesc;
-        
+
         /// <summary>
         /// txtValues control.
         /// </summary>
@@ -56,7 +58,16 @@ namespace SimpleSurvey {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtValues;
-        
+
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+
         /// <summary>
         /// btnSubmit control.
         /// </summary>
@@ -65,7 +76,7 @@ namespace SimpleSurvey {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
-        
+
         /// <summary>
         /// btnCancel control.
         /// </summary>

@@ -30,6 +30,28 @@ namespace SimpleSurvey
             ddlSurveys.DataTextField = "Title";
             ddlSurveys.DataValueField = "ID";
             ddlSurveys.DataBind();
+            Label1.Visible = false;
+            Label2.Visible = false;
+            Label3.Visible = false;
+            Label4.Visible = false;
+            Label5.Visible = false;
+            Label6.Visible = false;
+            Label7.Visible = false;
+            Label8.Visible = false;
+            Label9.Visible = false;
+            TextBox1.Visible = false;
+            TextBox2.Visible = false;
+            TextBox3.Visible = false;
+            TextBox4.Visible = false;
+            TextBox5.Visible = false;
+            TextBox6.Visible = false;
+            TextBox7.Visible = false;
+            TextBox8.Visible = false;
+            TextBox9.Visible = false;
+            
+           
+
+
         }
 
         protected void ddlSurveys_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,59 +66,43 @@ namespace SimpleSurvey
                                         join q in context.SurveyQuestions on p.ID equals q.QuestionID
                                         where q.SurveyID == surveyid
                                         select p).ToList();
-            Table tbl = new Table();
-            tbl.Width = Unit.Percentage(100);
-            TableRow tr;
-            TableCell tc;
-            TextBox txt;
-            CheckBox cbk;
-            DropDownList ddl;
+           
 
-            foreach (Question q in questions)
+           for(int i=0;i<questions.Count();i++)
             {
-                tr = new TableRow();
-                tc = new TableCell();
-                tc.Width = Unit.Percentage(25);
-                tc.Text = q.Text;
-                tc.Attributes.Add("id", q.ID.ToString());
-                tr.Cells.Add(tc);
-                tc = new TableCell();
-
-                if (q.QuestionType.ToLower() == "singlelinetextbox")
+                switch(i)
                 {
-                    txt = new TextBox();
-                    txt.ID = "txt_" + q.ID;
-                    txt.Width = Unit.Percentage(40);
-                    tc.Controls.Add(txt);
+                    case 0:Label1.Visible = true;
+                        TextBox1.Visible = true;
+                        Label1.Text = questions[0].Text;
+                        break;
+                    case 1:Label2.Visible = true;
+                        TextBox2.Visible = true;
+                        Label2.Text = questions[1].Text;
+                        break;
+                    case 2:
+                        Label3.Visible = true;
+                        TextBox3.Visible = true;
+                        Label3.Text = questions[2].Text;
+                        break;
+                    case 3:
+                        Label4.Visible = true;
+                        TextBox4.Visible = true;
+                        Label4.Text = questions[3].Text;
+                        break;
+                    case 4:
+                        Label5.Visible = true;
+                        TextBox5.Visible = true;
+                        Label5.Text = questions[4].Text;
+                        break;
+                    case 5:
+                        Label6.Visible = true;
+                        TextBox6.Visible = true;
+                        Label6.Text = questions[5].Text;
+                        break;
                 }
 
-                if (q.QuestionType.ToLower() == "multilinetextbox")
-                {
-                    txt = new TextBox();
-                    txt.ID = "txt_" + q.ID;
-                    txt.TextMode = TextBoxMode.MultiLine;
-                    txt.Width = Unit.Percentage(40);
-                    tc.Controls.Add(txt);
-                }
-
-                if (q.QuestionType.ToLower() == "singleselect")
-                {
-                    ddl = new DropDownList();
-                    ddl.ID = "ddl_" + q.ID;
-                    ddl.Width = Unit.Percentage(41);
-                    if (!string.IsNullOrEmpty(q.Options))
-                    {
-                        string[] values = q.Options.Split(',');
-                        foreach (string v in values)
-                            ddl.Items.Add(v.Trim());
-                    }
-                    tc.Controls.Add(ddl);
-                }
-                tc.Width = Unit.Percentage(80);
-                tr.Cells.Add(tc);
-                tbl.Rows.Add(tr);
             }
-            pnlSurvey.Controls.Add(tbl);
         }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -105,6 +111,7 @@ namespace SimpleSurvey
             foreach (Survey_Response sres in response)
                 context.AddToSurvey_Response(sres);
             context.SaveChanges();
+            Response.Redirect("HtmlPage1.html");
         }
 
         private List<Survey_Response> GetSurveyReponse()
@@ -144,5 +151,7 @@ namespace SimpleSurvey
             }
             return response;
         }
+
+        
     }
 }
